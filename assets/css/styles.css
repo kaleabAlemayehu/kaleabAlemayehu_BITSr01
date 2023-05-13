@@ -24,6 +24,18 @@
   --z-tooltip: 10;
   --z-fixed: 100;
 }
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --bigger-font-size: 2rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -39,4 +51,96 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+/* classes and ids styles */
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--container-color);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo span {
+  color: var(--first-color);
+}
+.nav__toggle,
+.nav__close {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+/* for responsiveness to small devices*/
+
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsl(0, 0%, 10%, 0.3);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24);
+    transition: right 0.4s;
+  }
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+/* Show menu when the toggle button clicked*/
+.show-menu {
+  right: 0;
 }
