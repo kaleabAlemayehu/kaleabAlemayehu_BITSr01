@@ -53,6 +53,14 @@ body {
   color: var(--text-color);
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
 ul {
   list-style: none;
 }
@@ -102,6 +110,39 @@ svg {
   color: var(--title-color);
   cursor: pointer;
 }
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 2rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.section__subtitle {
+  font-size: var(--small-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.section__subtitle span {
+  color: var(--first-color);
+}
+
+.main {
+  overflow: hidden;
+}
 
 /* for responsiveness to small devices*/
 
@@ -143,4 +184,78 @@ svg {
 /* Show menu when the toggle button clicked*/
 .show-menu {
   right: 0;
+}
+.home {
+  background-color: var(--container-color);
+}
+.home__container {
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
+.home__content {
+  display: grid;
+  row-gap: 2rem;
+}
+.home__data {
+  text-align: center;
+}
+.home__subtitle,
+.home__education {
+  font-size: var(--bigger-font-size);
+}
+.home__subtitle span,
+.home__title {
+  color: var(--first-color);
+}
+
+.home__title {
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.home__description {
+  margin-block: 1rem 1.5rem;
+}
+.home__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+.home__social-link {
+  display: flex;
+  background-color: var(--first-color-alt);
+  padding: 0.5rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.4s;
+}
+.home__social-link:hover {
+  transform: translateY(-0.25rem);
+}
+.home__image {
+  justify-self: center;
+}
+
+.home__blob {
+  width: 320px;
+  fill: var(--first-color);
+  filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+.home__img {
+  width: 900px;
+  transform: translateX(-120px);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow 0.4s;
+}
+.button:hover {
+  box-shadow: 0 8px 24px hsla(var(--), 100%, 40%, 0.25);
 }
