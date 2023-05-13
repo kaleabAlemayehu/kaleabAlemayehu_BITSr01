@@ -185,6 +185,8 @@ svg {
 .show-menu {
   right: 0;
 }
+
+/* home section style */
 .home {
   background-color: var(--container-color);
 }
@@ -258,4 +260,25 @@ svg {
 }
 .button:hover {
   box-shadow: 0 8px 24px hsla(var(--), 100%, 40%, 0.25);
+}
+/* about section style */
+.about__container {
+  row-gap: 2.5rem;
+}
+
+.about__data {
+  text-align: center;
+}
+.about__description {
+  margin-bottom: 2rem;
+}
+.about__image {
+  justify-self: center;
+}
+.about__blob {
+  width: 320px;
+}
+
+.about__blob path {
+  stroke: var(--first-color);
 }
