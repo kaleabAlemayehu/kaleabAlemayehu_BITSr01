@@ -20,3 +20,32 @@ const blurHeader = () => {
     : header.classList.remove("blur-header");
 };
 window.addEventListener("scroll", blurHeader);
+
+// send email from the form
+const contactForm = document.getElementById("contact-form"),
+  contactMessage = document.getElementById("contact-message");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+  emailjs
+    .sendForm(
+      "portfolioFormService",
+      "templateForPortfolio",
+      "#contact-form",
+      "bTy-BCTrj6Xi9vKi6"
+    )
+    .then(
+      () => {
+        contactMessage.textContent = "Message sent Successfully!";
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 5000);
+
+        contactForm.reset();
+      },
+      () => {
+        contactMessage.textContent = "Message is not sent";
+      }
+    );
+};
+contactForm.addEventListener("submit", sendEmail);
