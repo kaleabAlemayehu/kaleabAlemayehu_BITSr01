@@ -298,3 +298,38 @@ svg {
 .about__blob path {
   stroke: var(--first-color);
 }
+/* skills section style */
+.skills {
+  background-color: var(--container-color);
+}
+.skills__container {
+  padding-bottom: 2rem;
+  row-gap: 3.5rem;
+}
+.skills__data {
+  text-align: center;
+}
+.skills__description {
+  margin-bottom: 2rem;
+}
+.skills__content,
+.skills__group {
+  display: grid;
+}
+.skills__content {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 4rem;
+  justify-content: center;
+  align-items: baseline;
+}
+.skills__group {
+  row-gap: 1rem;
+  list-style: decimal-leading-zero;
+}
+.skills__item {
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+.skills__item::marker {
+  color: var(--first-color);
+}
