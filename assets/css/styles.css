@@ -361,3 +361,73 @@ svg {
 .projects__card:hover {
   border: 2px solid var(--first-color);
 }
+
+/* showcase section style */
+
+.showcases {
+  background-color: var(--container-color);
+}
+
+.showcases__container {
+  row-gap: 2rem;
+  justify-content: center;
+  padding-block: 1rem;
+}
+.showcases__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.showcases__img {
+  width: 100%;
+  height: 100%;
+}
+.showcases__modal {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(var(--hue), 70%, 40%, 0.8) 120%
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.4s;
+}
+
+.showcases__subtitle,
+.showcases__button {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+.showcases__subtitle {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.showcase__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.75rem;
+}
+.showcase__button {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.showcase__button i {
+  font-size: 1.25rem;
+}
+
+.showcases__card:hover .showcases__modal {
+  bottom: 0;
+}
