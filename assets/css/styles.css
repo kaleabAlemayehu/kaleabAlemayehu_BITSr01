@@ -214,6 +214,11 @@ svg {
   left: 0;
   z-index: -1;
 }
+/* active link style */
+
+.active-link {
+  color: var(--first-color);
+}
 /* home section style */
 .home {
   background-color: var(--container-color);
